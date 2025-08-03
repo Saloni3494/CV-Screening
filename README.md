@@ -3,7 +3,6 @@
 
 A candidate-centric tool that empowers job seekers by analyzing their resume against specific job descriptions, providing instant, actionable feedback on strengths and skill gaps.
 
-A GIF demonstrating the app's workflow will go here.
 
 🎯 The Problem
 The modern job search is highly competitive. Candidates often send out hundreds of applications without receiving a response, struggling to understand why their resume was rejected or how to improve it. This tool solves that problem by providing clear, data-driven insights into job fit and pinpointing specific missing skills, turning rejection into an opportunity for growth.

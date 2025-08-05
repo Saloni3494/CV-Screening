@@ -6,7 +6,7 @@ import spacy
 import unicodedata
 from tqdm import tqdm
 
-# Load spaCy model
+# Load spaCy model, can use other models like "en_core_web_md" for better accuracy
 nlp = spacy.load("en_core_web_sm")
 
 # Step 1: Extract text from PDF

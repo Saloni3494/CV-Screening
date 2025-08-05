@@ -35,3 +35,16 @@ Review: In seconds, view your match score and get a list of matched skills and, 
 
 🛠️ Tech Stack
 This project leverages a modern Python stack for web development and natural language processing.
+
+
+
+
+Steps to execute:
+
+Step 1: Create virtual environment using `python -m venv venv`
+
+Step 2: Activate virtual environment using `source venv/bin/activate` (on Linux/Mac) or `venv\Scripts\activate` (on Windows)
+
+Step 3: Install required packages 
+
+Step 4: Execute using `python app.py`

@@ -100,14 +100,22 @@ def process_and_save_csv(pdf_folder, output_csv):
             entities
         ])
 
+    file_exists = os.path.exists(output_csv)
+
     # Write to CSV
-    with open(output_csv, mode='w', newline='', encoding='utf-8') as f:
+    with open(output_csv, mode='a', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
-        writer.writerow(["Filename", "Title", "Full Text (Preview)", "Education", "Experience", "Skills", "Named Entities"])
+
+        if not file_exists:
+            writer.writerow(["Filename", "Title", "Full Text (Preview)", "Education", "Experience", "Skills", "Named Entities"])
         writer.writerows(all_data)
 
 # === USAGE ===
-pdf_folder = "cvs"  # Make sure this folder contains your PDFs
+data_folder = "data"  # Make sure this folder contains your PDFs
 output_csv = "processed_cvs.csv"
 
-process_and_save_csv(pdf_folder, output_csv)
+for profession in os.listdir(data_folder):
+    pdf_folder = os.path.join(data_folder, profession)
+
+    if os.path.isdir(pdf_folder):
+        process_and_save_csv(pdf_folder, output_csv)
